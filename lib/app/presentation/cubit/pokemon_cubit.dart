@@ -1,12 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 import 'package:pokedex_app/app/domain/entities/pokemon_entity.dart';
 import 'package:pokedex_app/app/domain/usecases/pokemon_list/pokemon_list_usecase.dart';
 part 'state/pokemon_state.dart';
 
+@injectable
 class PokemonCubit extends Cubit<PokemonState> {
   final PokemonListUsecase pokemonUsecase;
-  
 
   PokemonCubit(this.pokemonUsecase) : super(PokemonInitialState());
 

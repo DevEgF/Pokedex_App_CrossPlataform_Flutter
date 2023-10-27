@@ -4,7 +4,7 @@ import 'package:pokedex_app/app/domain/entities/pokemon_entity.dart';
 class PokemonCard extends StatelessWidget {
   final PokemonEntity pokemon;
 
-  const PokemonCard({required this.pokemon});
+  const PokemonCard({super.key, required this.pokemon});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,8 @@ class PokemonCard extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: Text(
                 pokemon.name.toUpperCase(),
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             )
           ],

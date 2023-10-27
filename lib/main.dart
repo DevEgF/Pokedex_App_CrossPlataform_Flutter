@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_app/app/presentation/pages/pokedex_page.dart';
-import 'package:pokedex_app/di/locator.dart';
+import 'package:pokedex_app/di/injection.dart';
 
 void main() {
-  setupDependencies();
+  WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
   runApp(const MyApp());
 }
 
